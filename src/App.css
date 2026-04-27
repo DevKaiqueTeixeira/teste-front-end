@@ -14,10 +14,6 @@
   padding: 0 16px;
 }
 
-.app > .product-showcase-section:last-of-type {
-  padding-bottom: 80px;
-}
-
 @media (max-width: 768px) {
   .app > .card-options-section {
     padding: 26px 12px 0;
@@ -28,9 +24,5 @@
   .app > .brand-navigator-section {
     margin-top: 56px;
     padding: 0 12px;
-  }
-
-  .app > .product-showcase-section:last-of-type {
-    padding-bottom: 56px;
   }
 }

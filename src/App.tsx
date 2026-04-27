@@ -7,6 +7,7 @@ import { Header } from './components/Header'
 import { NotImplementedToast } from './components/NotImplementedToast'
 import { PartnersStrip } from './components/PartnersStrip'
 import { ProductShowcase } from './components/ProductShowcase'
+import { SiteFooter } from './components/SiteFooter'
 
 const NOT_IMPLEMENTED_MESSAGE = 'funcionalidade ainda não implementada'
 
@@ -54,6 +55,7 @@ function App() {
         showTabs={false}
         headingSubtitle="Ver todos"
       />
+      <SiteFooter onActionClick={showNotImplementedToast} />
       <NotImplementedToast
         isVisible={isToastVisible}
         message={NOT_IMPLEMENTED_MESSAGE}

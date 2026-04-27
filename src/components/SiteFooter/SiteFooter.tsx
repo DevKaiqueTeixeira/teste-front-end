@@ -1,5 +1,5 @@
 import type { FormEvent } from 'react'
-import { Facebook, Instagram, Linkedin } from 'lucide-react'
+import { RiFacebookLine, RiInstagramLine, RiLinkedinLine } from 'react-icons/ri'
 import './SiteFooter.css'
 
 type SiteFooterProps = {
@@ -52,55 +52,66 @@ export function SiteFooter({ onActionClick }: SiteFooterProps) {
                 <span className="site-footer-logo-text">onverse</span>
               </button>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Conteudos e novidades para voce acompanhar tudo em um so lugar.</p>
 
               <div className="site-footer-socials" aria-label="Redes sociais">
                 <button type="button" onClick={onActionClick} aria-label="Instagram">
-                  <Instagram size={24} />
+                  <RiInstagramLine />
                 </button>
                 <button type="button" onClick={onActionClick} aria-label="Facebook">
-                  <Facebook size={24} />
+                  <RiFacebookLine />
                 </button>
                 <button type="button" onClick={onActionClick} aria-label="Linkedin">
-                  <Linkedin size={24} />
+                  <RiLinkedinLine />
                 </button>
               </div>
             </div>
 
             <span className="site-footer-divider" aria-hidden />
 
-            <nav className="site-footer-column" aria-label="Institucional">
-              <h3>Institucional</h3>
-              {INSTITUTIONAL_LINKS.map((item) => (
-                <button key={item} type="button" onClick={onActionClick}>
-                  {item}
-                </button>
-              ))}
-            </nav>
+            <div className="site-footer-links" aria-label="Links institucionais e termos">
+              <nav
+                className="site-footer-column site-footer-column-institutional"
+                aria-label="Institucional"
+              >
+                <h3>Institucional</h3>
+                <div className="site-footer-column-links">
+                  {INSTITUTIONAL_LINKS.map((item) => (
+                    <button key={item} type="button" onClick={onActionClick}>
+                      {item}
+                    </button>
+                  ))}
+                </div>
+              </nav>
 
-            <nav className="site-footer-column" aria-label="Ajuda">
-              <h3>Ajuda</h3>
-              {SUPPORT_LINKS.map((item) => (
-                <button key={item} type="button" onClick={onActionClick}>
-                  {item}
-                </button>
-              ))}
-            </nav>
+              <nav className="site-footer-column site-footer-column-help" aria-label="Ajuda">
+                <h3>Ajuda</h3>
+                <div className="site-footer-column-links">
+                  {SUPPORT_LINKS.map((item) => (
+                    <button key={item} type="button" onClick={onActionClick}>
+                      {item}
+                    </button>
+                  ))}
+                </div>
+              </nav>
 
-            <nav className="site-footer-column" aria-label="Termos">
-              <h3>Termos</h3>
-              {TERMS_LINKS.map((item) => (
-                <button key={item} type="button" onClick={onActionClick}>
-                  {item}
-                </button>
-              ))}
-            </nav>
+              <nav className="site-footer-column site-footer-column-terms" aria-label="Termos">
+                <h3>Termos</h3>
+                <div className="site-footer-column-links">
+                  {TERMS_LINKS.map((item) => (
+                    <button key={item} type="button" onClick={onActionClick}>
+                      {item}
+                    </button>
+                  ))}
+                </div>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="site-footer-bottom">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p> 2026 Econverse. Todos os direitos reservados.</p>
       </div>
     </section>
   )
