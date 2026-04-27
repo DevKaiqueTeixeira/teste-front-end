@@ -1,3 +1,5 @@
+@use './styles/tokens' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400&display=swap');
 
 * {
@@ -6,8 +8,8 @@
 
 body {
   margin: 0;
-  font-family: 'Nunito Sans', 'Segoe UI', sans-serif;
-  background: #fff;
+  font-family: $font-base;
+  background: $color-white;
 }
 
 #root {

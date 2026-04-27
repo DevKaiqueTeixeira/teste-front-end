@@ -1,7 +1,7 @@
 import { X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import type { Product } from '../../types'
-import './ProductModal.css'
+import './ProductModal.scss'
 
 type ProductModalProps = {
   product: Product

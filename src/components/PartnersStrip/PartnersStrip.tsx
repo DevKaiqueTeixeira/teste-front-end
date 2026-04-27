@@ -1,6 +1,6 @@
 import partnerBackgroundImage from '../../assets/parceiros.jpg'
 import { PartnerCarousel } from './components/PartnerCarousel'
-import './PartnersStrip.css'
+import './PartnersStrip.scss'
 
 type PartnersStripProps = {
   onActionClick: () => void

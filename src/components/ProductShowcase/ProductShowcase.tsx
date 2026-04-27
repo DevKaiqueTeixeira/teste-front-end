@@ -5,7 +5,7 @@ import { ProductCarousel } from './components/ProductCarousel'
 import { ProductModal } from './components/ProductModal'
 import { ProductTabs } from './components/ProductTabs'
 import type { Product } from './types'
-import './ProductShowcase.css'
+import './ProductShowcase.scss'
 
 type ProductShowcaseProps = {
   onActionClick: () => void

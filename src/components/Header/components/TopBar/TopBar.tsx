@@ -1,5 +1,5 @@
 import { CreditCard, ShieldCheck, Truck } from 'lucide-react'
-import './TopBar.css'
+import './TopBar.scss'
 
 type TopBarProps = {
   onActionClick: () => void

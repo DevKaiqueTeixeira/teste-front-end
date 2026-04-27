@@ -1,3 +1,6 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
 .black-friday-hero {
   position: relative;
   width: 100%;
@@ -27,7 +30,7 @@
   padding: 42px 32px;
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .black-friday-hero {
     width: 100%;
     min-height: 560px;
@@ -45,11 +48,11 @@
   }
 
   .black-friday-inner {
-    padding: 24px 16px 42px;
+    padding: 24px $space-page-desktop 42px;
   }
 }
 
-@media (max-width: 420px) {
+@include down(small) {
   .black-friday-hero {
     min-height: 500px;
     height: 500px;
@@ -57,6 +60,6 @@
   }
 
   .black-friday-inner {
-    padding: 20px 12px 34px;
+    padding: 20px $space-page-mobile 34px;
   }
 }

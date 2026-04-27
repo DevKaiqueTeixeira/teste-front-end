@@ -1,4 +1,4 @@
-import './BrandNavigator.css'
+import './BrandNavigator.scss'
 
 type BrandNavigatorProps = {
   onActionClick: () => void

@@ -4,6 +4,49 @@
 
 Segue abaixo as instruções para a execução do teste.
 
+## Apresentação do teste
+- Projeto desenvolvido com React, TypeScript, Vite e Sass (SCSS), seguindo o layout solicitado.
+- A API JSON do desafio não pôde ser consumida diretamente no front-end por bloqueio de CORS no navegador.
+- Para manter a vitrine funcionando, os produtos foram mockados localmente em `src/components/ProductShowcase/mockProducts.ts`.
+- Foram adicionados toasts de aviso para melhorar a experiência:
+  - Toast global para cliques em funcionalidades ainda não implementadas.
+  - Toast na vitrine para avisar quando a categoria não possui produtos no contexto atual.
+
+## Como rodar o projeto em qualquer máquina
+
+### Pré-requisitos
+- Node.js 18+
+- npm
+
+### Passo a passo
+1. Clone o repositório:
+   ```bash
+   git clone <url-do-repositorio>
+   ```
+2. Entre na pasta do projeto:
+   ```bash
+   cd teste-front-end
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Rode em modo desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+5. Abra no navegador o endereço mostrado no terminal (normalmente `http://localhost:5173`).
+
+### Build de produção
+```bash
+npm run build
+```
+
+### Preview da build
+```bash
+npm run preview
+```
+
 ## Instruções
 - Faça um fork desse projeto para a sua conta pessoal do GitHub.
 - Desenvolva a página conforme as **Especificações Técnicas** 

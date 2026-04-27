@@ -1,4 +1,4 @@
-import './ProductTabs.css'
+import './ProductTabs.scss'
 
 type ProductTabsProps = {
   tabs: string[]

@@ -1,6 +1,6 @@
 import { Crown, LayoutGrid, type LucideIcon } from 'lucide-react'
 import { ScrollHintBar } from '../../../ScrollHintBar'
-import './Menu.css'
+import './Menu.scss'
 
 type MenuProps = {
   onActionClick: () => void

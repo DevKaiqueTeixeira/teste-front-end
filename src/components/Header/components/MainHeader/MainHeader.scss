@@ -1,6 +1,9 @@
+@use '../../../../styles/tokens' as *;
+@use '../../../../styles/mixins' as *;
+
 .main-header-wrap {
   border-bottom: 1px solid #f1f1f1;
-  background: #fff;
+  background: $color-white;
 }
 
 .main-header {
@@ -9,7 +12,7 @@
   height: 74px;
   display: flex;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 $space-page-desktop;
   gap: 28px;
 }
 
@@ -29,8 +32,8 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: #f6c700;
-  color: #fff;
+  background: $color-brand-yellow;
+  color: $color-white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +44,7 @@
 }
 
 .logo-text {
-  color: #251f56;
+  color: $color-brand-text;
   font-size: 40px;
   line-height: 1;
   text-transform: lowercase;
@@ -112,7 +115,7 @@
   opacity: 0.85;
 }
 
-@media (max-width: 1024px) {
+@include down(tablet) {
   .main-header {
     gap: 18px;
   }
@@ -137,7 +140,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .main-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -146,7 +149,7 @@
       'search search';
     align-items: center;
     height: auto;
-    padding: 12px 16px 14px;
+    padding: 12px $space-page-desktop 14px;
     row-gap: 12px;
     column-gap: 12px;
   }
@@ -193,9 +196,9 @@
   }
 }
 
-@media (max-width: 420px) {
+@include down(small) {
   .main-header {
-    padding: 10px 12px 12px;
+    padding: 10px $space-page-mobile 12px;
   }
 
   .logo {

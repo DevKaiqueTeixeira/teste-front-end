@@ -1,0 +1,28 @@
+@use 'sass:map';
+@use './breakpoints' as bp;
+
+$breakpoints: (
+  small: bp.$bp-small,
+  mobile: bp.$bp-mobile,
+  tablet: bp.$bp-tablet,
+  card-scroll: bp.$bp-card-scroll,
+  brand-scroll: bp.$bp-brand-scroll,
+);
+
+@mixin down($name) {
+  $value: map.get($breakpoints, $name);
+
+  @if $value == null {
+    @error "Unknown breakpoint '#{$name}'.";
+  }
+
+  @media (max-width: $value) {
+    @content;
+  }
+}
+
+@mixin up($value) {
+  @media (min-width: $value) {
+    @content;
+  }
+}

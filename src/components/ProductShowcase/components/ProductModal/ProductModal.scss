@@ -1,3 +1,6 @@
+@use '../../../../styles/tokens' as *;
+@use '../../../../styles/mixins' as *;
+
 .product-modal-overlay {
   position: fixed;
   inset: 0;
@@ -14,7 +17,7 @@
   width: min(100%, 852px);
   min-height: 320px;
   border-radius: 10px;
-  background: #fff;
+  background: $color-white;
   display: grid;
   grid-template-columns: 246px 1fr;
   gap: 22px;
@@ -51,8 +54,8 @@
 
 .product-modal-content h3 {
   margin: 0;
-  color: #3f3f40;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $color-text-base;
+  font-family: $font-display;
   font-size: 30px;
   font-weight: 500;
   line-height: 1.16;
@@ -62,8 +65,8 @@
 
 .product-modal-price {
   margin: 10px 0 18px;
-  color: #3f3f40;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $color-text-base;
+  font-family: $font-display;
   font-size: 36px;
   font-weight: 700;
   line-height: 1;
@@ -72,7 +75,7 @@
 .product-modal-description {
   margin: 0;
   color: #9f9f9f;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: $font-display;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.35;
@@ -84,8 +87,8 @@
   background: transparent;
   margin-top: 10px;
   padding: 0;
-  color: #3442c5;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $color-primary;
+  font-family: $font-display;
   font-size: 13px;
   font-weight: 700;
   line-height: 1;
@@ -113,7 +116,7 @@
   border: none;
   background: transparent;
   color: #707070;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: $font-display;
   font-size: 20px;
   line-height: 1;
   cursor: pointer;
@@ -121,8 +124,8 @@
 
 .product-modal-quantity span {
   text-align: center;
-  color: #3f3f40;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $color-text-base;
+  font-family: $font-display;
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
@@ -133,9 +136,9 @@
   height: 38px;
   border: none;
   border-radius: 6px;
-  background: #f7ca11;
+  background: $color-action-yellow;
   color: #272727;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: $font-display;
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
@@ -150,13 +153,13 @@
 .product-modal-feedback {
   margin: 10px 0 0;
   color: #1a7f37;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: $font-display;
   font-size: 13px;
   font-weight: 700;
   line-height: 1.2;
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .product-modal-overlay {
     align-items: flex-end;
     padding: 10px;

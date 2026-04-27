@@ -1,12 +1,15 @@
+@use '../../../../styles/tokens' as *;
+@use '../../../../styles/mixins' as *;
+
 .top-bar-wrap {
   border-bottom: 1px solid #f1f1f1;
-  background: #fff;
+  background: $color-white;
 }
 
 .top-bar {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 $space-page-desktop;
   height: 30px;
   display: flex;
   align-items: center;
@@ -50,13 +53,13 @@
   color: #707070;
 }
 
-@media (max-width: 1024px) {
+@include down(tablet) {
   .top-bar {
     gap: 34px;
   }
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .top-bar-wrap {
     display: none;
   }

@@ -1,7 +1,10 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
 .card-options-section {
   width: 100%;
-  background: #f5f5f5;
-  padding: 34px 16px 40px;
+  background: $color-page-background;
+  padding: 34px $space-page-desktop 40px;
 }
 
 .card-options-layout {
@@ -14,7 +17,7 @@
   gap: 42px;
 }
 
-@media (max-width: 1220px) {
+@include down(card-scroll) {
   .card-options-layout {
     justify-content: flex-start;
     overflow-x: auto;
@@ -27,9 +30,9 @@
   }
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .card-options-section {
-    padding: 26px 12px 30px;
+    padding: 26px $space-page-mobile 30px;
   }
 
   .card-options-layout {

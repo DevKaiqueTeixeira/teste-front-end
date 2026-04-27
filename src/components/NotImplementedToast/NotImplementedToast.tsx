@@ -1,4 +1,4 @@
-import './NotImplementedToast.css'
+import './NotImplementedToast.scss'
 
 type NotImplementedToastProps = {
   isVisible: boolean

@@ -1,6 +1,6 @@
 import type { FormEvent } from 'react'
 import { RiFacebookLine, RiInstagramLine, RiLinkedinLine } from 'react-icons/ri'
-import './SiteFooter.css'
+import './SiteFooter.scss'
 
 type SiteFooterProps = {
   onActionClick: () => void

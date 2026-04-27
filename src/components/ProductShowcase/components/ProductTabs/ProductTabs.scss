@@ -1,19 +1,22 @@
+@use '../../../../styles/tokens' as *;
+@use '../../../../styles/mixins' as *;
+
 .product-tabs {
-  width: min(100%, 1280px);
+  width: min(100%, $container-xl);
   min-height: 40px;
   margin: 0 auto;
   border: 1px solid #cfcfcf;
   display: grid;
   grid-template-columns: repeat(6, minmax(120px, 1fr));
-  background: #fff;
+  background: $color-white;
 }
 
 .product-tab {
   border: none;
   border-right: 1px solid #cfcfcf;
-  background: #fff;
-  color: #3f3f40;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: $color-white;
+  color: $color-text-base;
+  font-family: $font-display;
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
@@ -26,11 +29,11 @@
 }
 
 .product-tab.is-active {
-  color: #3442c5;
+  color: $color-primary;
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .product-tabs {
     display: flex;
     overflow-x: auto;

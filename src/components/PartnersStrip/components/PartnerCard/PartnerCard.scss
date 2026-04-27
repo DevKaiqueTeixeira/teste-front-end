@@ -1,3 +1,6 @@
+@use '../../../../styles/tokens' as *;
+@use '../../../../styles/mixins' as *;
+
 .partner-card {
   width: 100%;
   height: 100%;
@@ -20,8 +23,8 @@
 
 .partner-card h3 {
   margin: 0;
-  color: #fff;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $color-white;
+  font-family: $font-display;
   font-size: 40px;
   font-weight: 700;
   line-height: 1;
@@ -30,8 +33,8 @@
 .partner-card p {
   width: 216px;
   margin: 14px 0 16px;
-  color: #fff;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $color-white;
+  font-family: $font-display;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.33;
@@ -42,9 +45,9 @@
   height: 50px;
   border: none;
   border-radius: 8px;
-  background: #f7ca11;
+  background: $color-action-yellow;
   color: #272727;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: $font-display;
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
@@ -55,7 +58,7 @@
   filter: brightness(1.05);
 }
 
-@media (max-width: 1024px) {
+@include down(tablet) {
   .partner-card {
     height: 300px;
     min-height: 300px;
@@ -66,7 +69,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .partner-card {
     height: 260px;
     min-height: 260px;

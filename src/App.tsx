@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import './App.css'
+import './App.scss'
 import { BrandNavigator } from './components/BrandNavigator'
 import { BlackFridayHero } from './components/BlackFridayHero'
 import { CardOptions } from './components/CardOptions'

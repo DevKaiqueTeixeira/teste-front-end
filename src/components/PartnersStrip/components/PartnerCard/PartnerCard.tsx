@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import './PartnerCard.css'
+import './PartnerCard.scss'
 
 type PartnerCardProps = {
   title: string

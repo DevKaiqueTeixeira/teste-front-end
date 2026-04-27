@@ -1,6 +1,9 @@
+@use '../../../../styles/tokens' as *;
+@use '../../../../styles/mixins' as *;
+
 .menu-wrap {
   position: relative;
-  background: #fff;
+  background: $color-white;
   padding-bottom: 2px;
 }
 
@@ -9,10 +12,10 @@
   position: absolute;
   top: 0;
   left: 50%;
-  width: min(100%, 1280px);
+  width: min(100%, $container-xl);
   height: 45px;
   transform: translateX(-50%);
-  background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+  background: linear-gradient(180deg, $color-white 0%, #fafafa 100%);
   border-bottom: 1px solid #ececec;
   box-shadow:
     0 10px 22px rgba(0, 0, 0, 0.28),
@@ -22,11 +25,11 @@
 
 .menu {
   box-sizing: border-box;
-  width: min(100%, 1280px);
+  width: min(100%, $container-xl);
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  padding: 0 16px;
+  padding: 0 $space-page-desktop;
   height: 45px;
   display: flex;
   align-items: center;
@@ -68,10 +71,10 @@
 }
 
 .menu-button.active {
-  color: #2e37c9;
+  color: $color-primary-strong;
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .menu-wrap {
     padding-bottom: 0;
   }
@@ -84,7 +87,7 @@
     height: 42px;
     gap: 18px;
     justify-content: flex-start;
-    padding: 0 12px;
+    padding: 0 $space-page-mobile;
     scroll-snap-type: x proximity;
   }
 
@@ -96,11 +99,11 @@
 
   .menu-scroll-hint {
     margin: 2px 0 8px;
-    padding: 0 12px;
+    padding: 0 $space-page-mobile;
   }
 }
 
-@media (max-width: 420px) {
+@include down(small) {
   .menu-wrap::before {
     height: 44px;
   }

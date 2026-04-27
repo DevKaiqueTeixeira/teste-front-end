@@ -1,6 +1,6 @@
 import backgroundImage from '../../assets/bg-blackfriday.jpg'
 import { BlackFridayContent } from './components/BlackFridayContent'
-import './BlackFridayHero.css'
+import './BlackFridayHero.scss'
 
 type BlackFridayHeroProps = {
   onActionClick: () => void

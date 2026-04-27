@@ -7,7 +7,7 @@ import supermercadoIcon from '../../assets/Supermercado.png'
 import tecnologiaIcon from '../../assets/Tecnologia.png'
 import { ScrollHintBar } from '../ScrollHintBar'
 import { CardOptionItem } from './components/CardOptionItem'
-import './CardOptions.css'
+import './CardOptions.scss'
 
 type CardOptionsProps = {
   onActionClick: () => void

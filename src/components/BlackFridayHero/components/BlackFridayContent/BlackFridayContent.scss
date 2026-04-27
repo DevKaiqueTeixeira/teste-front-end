@@ -1,11 +1,14 @@
+@use '../../../../styles/tokens' as *;
+@use '../../../../styles/mixins' as *;
+
 .black-friday-content {
   width: min(100%, 470px);
-  color: #fff;
+  color: $color-white;
 }
 
 .black-friday-title {
   margin: 0;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: $font-display;
   font-style: normal;
   font-size: 48px;
   line-height: 50px;
@@ -20,7 +23,7 @@
 
 .black-friday-subtitle {
   margin: 24px 0 30px;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: $font-display;
   font-style: normal;
   font-size: 32px;
   line-height: 1;
@@ -29,8 +32,8 @@
 }
 
 .black-friday-subtitle strong {
-  color: #f6c700;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $color-brand-yellow;
+  font-family: $font-display;
   font-style: normal;
   font-size: 32px;
   line-height: 1;
@@ -49,9 +52,9 @@
   box-sizing: border-box;
   padding: 7px 49px;
   border: none;
-  background: #f6c700;
+  background: $color-brand-yellow;
   color: #1f1f1f;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: $font-display;
   font-size: 24px;
   line-height: 1;
   font-weight: 700;
@@ -66,7 +69,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .black-friday-content {
     width: min(100%, 320px);
   }
@@ -97,7 +100,7 @@
   }
 }
 
-@media (max-width: 420px) {
+@include down(small) {
   .black-friday-content {
     width: min(100%, 288px);
   }

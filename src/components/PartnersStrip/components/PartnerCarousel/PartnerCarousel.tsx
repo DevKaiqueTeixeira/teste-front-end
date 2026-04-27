@@ -1,5 +1,5 @@
 import { PartnerCard } from '../PartnerCard'
-import './PartnerCarousel.css'
+import './PartnerCarousel.scss'
 
 export type PartnerCarouselItem = {
   id: string

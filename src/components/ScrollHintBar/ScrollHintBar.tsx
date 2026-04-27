@@ -1,4 +1,4 @@
-import './ScrollHintBar.css'
+import './ScrollHintBar.scss'
 
 type ScrollHintBarProps = {
   className?: string

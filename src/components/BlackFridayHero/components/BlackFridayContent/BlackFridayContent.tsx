@@ -1,4 +1,4 @@
-import './BlackFridayContent.css'
+import './BlackFridayContent.scss'
 
 type BlackFridayContentProps = {
   onActionClick: () => void

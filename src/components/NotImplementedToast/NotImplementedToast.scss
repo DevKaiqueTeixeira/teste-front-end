@@ -1,3 +1,5 @@
+@use '../../styles/mixins' as *;
+
 .not-implemented-toast {
   position: fixed;
   top: 22px;
@@ -39,7 +41,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .not-implemented-toast {
     right: 12px;
     left: 12px;

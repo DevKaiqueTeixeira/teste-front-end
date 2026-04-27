@@ -1,4 +1,4 @@
-import './Header.css'
+import './Header.scss'
 import { MainHeader } from './components/MainHeader/MainHeader'
 import { Menu } from './components/Menu/Menu'
 import { TopBar } from './components/TopBar/TopBar'

@@ -1,11 +1,14 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
 .partners-strip-section {
   width: 100%;
-  background: #f5f5f5;
-  padding: 18px 16px 24px;
+  background: $color-page-background;
+  padding: 18px $space-page-desktop 24px;
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .partners-strip-section {
-    padding: 14px 12px 18px;
+    padding: 14px $space-page-mobile 18px;
   }
 }

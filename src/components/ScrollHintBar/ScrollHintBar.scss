@@ -1,8 +1,11 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
 .scroll-hint-bar {
   display: none;
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .scroll-hint-bar {
     display: block;
     width: 100%;
@@ -31,8 +34,8 @@
   .scroll-hint-arrow {
     width: 8px;
     height: 8px;
-    border-top: 2px solid #2e37c9;
-    border-right: 2px solid #2e37c9;
+    border-top: 2px solid $color-primary-strong;
+    border-right: 2px solid $color-primary-strong;
     opacity: 0.9;
   }
 

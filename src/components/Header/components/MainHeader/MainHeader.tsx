@@ -1,6 +1,6 @@
 import type { FormEvent } from 'react'
 import { Heart, Package, Search, ShoppingCart, User } from 'lucide-react'
-import './MainHeader.css'
+import './MainHeader.scss'
 
 type MainHeaderProps = {
   onActionClick: () => void

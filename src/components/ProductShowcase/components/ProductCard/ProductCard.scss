@@ -1,8 +1,11 @@
+@use '../../../../styles/tokens' as *;
+@use '../../../../styles/mixins' as *;
+
 .product-card {
   width: 304px;
   height: 500px;
   border-radius: 10px;
-  background: #fff;
+  background: $color-white;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   position: relative;
 }
@@ -32,8 +35,8 @@
   width: 275.85186767578125px;
   height: 46px;
   margin: 0;
-  color: #3f3f40;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $color-text-base;
+  font-family: $font-display;
   font-size: 18px;
   font-weight: 300;
   line-height: 23px;
@@ -52,7 +55,7 @@
   height: 20px;
   margin: 0;
   color: #808080;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: $font-display;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -66,8 +69,8 @@
   width: 96.82962799072266px;
   height: 30px;
   margin: 0;
-  color: #3f3f40;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $color-text-base;
+  font-family: $font-display;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
@@ -80,8 +83,8 @@
   width: 186.90370178222656px;
   height: 18px;
   margin: 0;
-  color: #3f3f40;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $color-text-base;
+  font-family: $font-display;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -94,8 +97,8 @@
   width: 76.5629653930664px;
   height: 18px;
   margin: 0;
-  color: #3442c5;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: $color-primary;
+  font-family: $font-display;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -109,9 +112,9 @@
   height: 44px;
   border: none;
   border-radius: 4px;
-  background: #3442c5;
-  color: #fff;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: $color-primary;
+  color: $color-white;
+  font-family: $font-display;
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
@@ -122,7 +125,7 @@
   filter: brightness(1.04);
 }
 
-@media (max-width: 768px) {
+@include down(mobile) {
   .product-card {
     width: 258px;
     min-width: 258px;

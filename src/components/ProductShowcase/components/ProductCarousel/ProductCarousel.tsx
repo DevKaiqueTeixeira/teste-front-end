@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Product } from '../../types'
 import { ProductCard } from '../ProductCard'
-import './ProductCarousel.css'
+import './ProductCarousel.scss'
 
 type ProductCarouselProps = {
   products: Product[]

@@ -1,4 +1,4 @@
-import './CardOptionItem.css'
+import './CardOptionItem.scss'
 
 type CardOptionItemProps = {
   label: string
