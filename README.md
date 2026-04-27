@@ -2,6 +2,11 @@
 
 Projeto desenvolvido com React, TypeScript, Vite e Sass (SCSS), seguindo o layout proposto no desafio.
 
+## Demo online (recrutadores)
+
+> LINK DO PROJETO EM PRODUCAO:
+> https://teste-front-end-ivory.vercel.app/
+
 ## Tecnologias
 
 - React
