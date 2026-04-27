@@ -22,11 +22,22 @@
     justify-content: flex-start;
     overflow-x: auto;
     padding-bottom: 8px;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: #bfbfbf transparent;
   }
 
   .card-options-layout::-webkit-scrollbar {
-    display: none;
+    display: block;
+    height: 6px;
+  }
+
+  .card-options-layout::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .card-options-layout::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+    border-radius: 999px;
   }
 }
 
@@ -38,10 +49,5 @@
   .card-options-layout {
     min-height: 146px;
     gap: 18px;
-  }
-
-  .card-options-scroll-hint {
-    margin-top: 10px;
-    padding: 0 2px;
   }
 }

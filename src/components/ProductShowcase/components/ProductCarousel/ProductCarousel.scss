@@ -89,7 +89,9 @@
     justify-content: flex-start;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: #bfbfbf transparent;
+    padding-bottom: 8px;
   }
 
   .product-carousel-grid.is-sliding-next,
@@ -98,7 +100,17 @@
   }
 
   .product-carousel-grid::-webkit-scrollbar {
-    display: none;
+    display: block;
+    height: 6px;
+  }
+
+  .product-carousel-grid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .product-carousel-grid::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+    border-radius: 999px;
   }
 
   .product-carousel-grid > div {

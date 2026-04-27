@@ -1,5 +1,4 @@
 import { Crown, LayoutGrid, type LucideIcon } from 'lucide-react'
-import { ScrollHintBar } from '../../../ScrollHintBar'
 import './Menu.scss'
 
 type MenuProps = {
@@ -39,8 +38,6 @@ export function Menu({ onActionClick }: MenuProps) {
           </button>
         ))}
       </nav>
-
-      <ScrollHintBar className="menu-scroll-hint" />
     </div>
   )
 }
