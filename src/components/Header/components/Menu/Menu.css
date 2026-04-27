@@ -1,28 +1,80 @@
+.menu-wrap {
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+}
+
 .menu {
-  height: 41px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 45px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  border-top: 1px solid #eee;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  justify-content: space-between;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-.menu a {
-  text-decoration: none;
-  color: #999;
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-button {
+  border: none;
+  background: transparent;
+  color: #9a9a9a;
   font-size: 12px;
   font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  min-height: 45px;
+  white-space: nowrap;
 }
 
-.menu a.active {
-  color: #3019b2;
+.menu-button svg {
+  flex-shrink: 0;
+}
+
+.menu-button:hover {
+  color: #757575;
+}
+
+.menu-button span {
+  text-transform: uppercase;
+}
+
+.menu-button.active {
+  color: #2e37c9;
 }
 
 @media (max-width: 768px) {
   .menu {
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 8px;
-    height: auto;
+    height: 42px;
+    gap: 18px;
+    justify-content: flex-start;
+    padding: 0 12px;
+    scroll-snap-type: x proximity;
+  }
+
+  .menu-button {
+    min-height: 42px;
+    font-size: 11px;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 420px) {
+  .menu {
+    height: 44px;
+    gap: 14px;
+    padding: 0 10px;
+  }
+
+  .menu-button {
+    font-size: 10px;
   }
 }

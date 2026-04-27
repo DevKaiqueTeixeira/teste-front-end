@@ -1,18 +1,35 @@
 import { CreditCard, ShieldCheck, Truck } from 'lucide-react'
 import './TopBar.css'
 
-export function TopBar() {
+type TopBarProps = {
+  onActionClick: () => void
+}
+
+export function TopBar({ onActionClick }: TopBarProps) {
   return (
-    <div className="top-bar">
-      <span>
-        <ShieldCheck size={14} /> Compra <strong>100% segura</strong>
-      </span>
-      <span>
-        <Truck size={14} /> <strong>Frete grátis</strong> acima de R$ 200
-      </span>
-      <span>
-        <CreditCard size={14} /> <strong>Parcele</strong> suas compras
-      </span>
+    <div className="top-bar-wrap">
+      <div className="top-bar">
+        <button type="button" className="top-bar-item" onClick={onActionClick}>
+          <ShieldCheck size={14} />
+          <span>
+            Compra <strong>100% segura</strong>
+          </span>
+        </button>
+
+        <button type="button" className="top-bar-item" onClick={onActionClick}>
+          <Truck size={14} />
+          <span>
+            <strong>Frete grátis</strong> acima de R$ 200
+          </span>
+        </button>
+
+        <button type="button" className="top-bar-item" onClick={onActionClick}>
+          <CreditCard size={14} />
+          <span>
+            <strong>Parcele</strong> suas compras
+          </span>
+        </button>
+      </div>
     </div>
   )
 }

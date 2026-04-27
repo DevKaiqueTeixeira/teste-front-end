@@ -1,6 +1,60 @@
 .header {
   width: 100%;
   background: #fff;
-  font-family: Arial, sans-serif;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  color: #757575;
+  font-family: 'Nunito Sans', 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 4;
+}
+
+.header-toast {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #fed7aa;
+  border-left: 4px solid #fb923c;
+  background: #fff7ed;
+  color: #9a3412;
+  padding: 11px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: lowercase;
+  box-shadow: 0 8px 24px rgba(122, 57, 11, 0.16);
+  animation: toast-in 180ms ease-out;
+}
+
+.header-toast-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ea580c;
+  flex-shrink: 0;
+}
+
+@keyframes toast-in {
+  from {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-toast {
+    right: 12px;
+    left: 12px;
+    top: 12px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
 }
