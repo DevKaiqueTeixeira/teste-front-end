@@ -1,0 +1,60 @@
+.scroll-hint-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .scroll-hint-bar {
+    display: block;
+    width: 100%;
+  }
+
+  .scroll-hint-track {
+    width: 100%;
+    height: 3px;
+    border-radius: 999px;
+    background: #d8d8d8;
+    position: relative;
+    display: block;
+  }
+
+  .scroll-hint-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    animation: scroll-hint-slide 1.4s ease-in-out infinite;
+  }
+
+  .scroll-hint-arrow {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #2e37c9;
+    border-right: 2px solid #2e37c9;
+    opacity: 0.9;
+  }
+
+  .scroll-hint-arrow-left {
+    transform: rotate(-135deg);
+  }
+
+  .scroll-hint-arrow-right {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes scroll-hint-slide {
+  0% {
+    transform: translate(-50%, -50%) translateX(-10px);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translateX(10px);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateX(-10px);
+  }
+}

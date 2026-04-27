@@ -36,4 +36,9 @@
     min-height: 146px;
     gap: 18px;
   }
+
+  .card-options-scroll-hint {
+    margin-top: 10px;
+    padding: 0 2px;
+  }
 }

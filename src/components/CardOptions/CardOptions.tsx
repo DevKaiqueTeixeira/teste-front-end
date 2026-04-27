@@ -5,6 +5,7 @@ import modaIcon from '../../assets/Moda.png'
 import saudeIcon from '../../assets/Saude.png'
 import supermercadoIcon from '../../assets/Supermercado.png'
 import tecnologiaIcon from '../../assets/Tecnologia.png'
+import { ScrollHintBar } from '../ScrollHintBar'
 import { CardOptionItem } from './components/CardOptionItem'
 import './CardOptions.css'
 
@@ -37,6 +38,8 @@ export function CardOptions({ onActionClick }: CardOptionsProps) {
           />
         ))}
       </div>
+
+      <ScrollHintBar className="card-options-scroll-hint" />
     </section>
   )
 }
