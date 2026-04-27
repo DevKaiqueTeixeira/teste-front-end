@@ -1,7 +1,11 @@
 .product-showcase-section {
   width: 100%;
   background: #f5f5f5;
-  padding: 14px 16px 72px;
+  padding: 8px 16px 46px;
+}
+
+.product-showcase-section.is-without-tabs {
+  padding-top: 0;
 }
 
 .product-showcase-container {
@@ -27,6 +31,16 @@
   letter-spacing: 0;
 }
 
+.product-showcase-heading-subtitle {
+  margin: -4px 0 10px;
+  text-align: center;
+  color: #3f3f40;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+}
+
 .product-showcase-heading-line {
   width: min(100%, 360px);
   height: 1px;
@@ -35,16 +49,26 @@
 
 .product-showcase-frame {
   width: min(100%, 1364px);
-  min-height: 613px;
+  min-height: 597px;
   margin: 18px auto 0;
   border: 1px solid #dfdfdf;
   background: #fff;
   padding: 16px 20px;
 }
 
+.product-showcase-frame.is-without-tabs {
+  margin-top: 10px;
+}
+
+@media (min-width: 1311px) {
+  .product-showcase-frame {
+    height: 597px;
+  }
+}
+
 @media (max-width: 768px) {
   .product-showcase-section {
-    padding: 18px 12px 36px;
+    padding: 10px 12px 28px;
   }
 
   .product-showcase-heading {
@@ -58,6 +82,11 @@
     white-space: nowrap;
   }
 
+  .product-showcase-heading-subtitle {
+    margin: -2px 0 8px;
+    font-size: 13px;
+  }
+
   .product-showcase-heading-line {
     width: 18%;
     min-width: 40px;
@@ -65,7 +94,12 @@
 
   .product-showcase-frame {
     min-height: auto;
+    height: auto;
     margin-top: 12px;
     padding: 14px 10px;
+  }
+
+  .product-showcase-frame.is-without-tabs {
+    margin-top: 8px;
   }
 }

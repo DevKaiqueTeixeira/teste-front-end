@@ -7,6 +7,8 @@ import './ProductShowcase.css'
 
 type ProductShowcaseProps = {
   onActionClick: () => void
+  showTabs?: boolean
+  headingSubtitle?: string
 }
 
 const CATEGORY_TABS = [
@@ -20,7 +22,11 @@ const CATEGORY_TABS = [
 
 const OUT_OF_STOCK_CATEGORY_MESSAGE = 'sem produtos no estoque dessa categoria'
 
-export function ProductShowcase({ onActionClick }: ProductShowcaseProps) {
+export function ProductShowcase({
+  onActionClick,
+  showTabs = true,
+  headingSubtitle,
+}: ProductShowcaseProps) {
   const [activeTab, setActiveTab] = useState(CATEGORY_TABS[0])
   const [isCategoryToastVisible, setIsCategoryToastVisible] = useState(false)
   const timeoutRef = useRef<number | null>(null)
@@ -47,6 +53,10 @@ export function ProductShowcase({ onActionClick }: ProductShowcaseProps) {
   }, [])
 
   const handleTabSelect = (tab: string) => {
+    if (!showTabs) {
+      return
+    }
+
     if (tab !== 'CELULAR' && tab !== 'VER TODOS') {
       showOutOfStockToast()
       return
@@ -56,7 +66,12 @@ export function ProductShowcase({ onActionClick }: ProductShowcaseProps) {
   }
 
   return (
-    <section className="product-showcase-section" aria-label="Vitrine de produtos">
+    <section
+      className={
+        showTabs ? 'product-showcase-section' : 'product-showcase-section is-without-tabs'
+      }
+      aria-label="Vitrine de produtos"
+    >
       <div className="product-showcase-container">
         <div className="product-showcase-heading">
           <span className="product-showcase-heading-line" aria-hidden />
@@ -64,23 +79,31 @@ export function ProductShowcase({ onActionClick }: ProductShowcaseProps) {
           <span className="product-showcase-heading-line" aria-hidden />
         </div>
 
-        <ProductTabs
-          tabs={CATEGORY_TABS}
-          activeTab={activeTab}
-          onSelect={handleTabSelect}
-        />
+        {headingSubtitle ? (
+          <p className="product-showcase-heading-subtitle">{headingSubtitle}</p>
+        ) : null}
 
-        <div className="product-showcase-frame">
+        {showTabs ? (
+          <ProductTabs
+            tabs={CATEGORY_TABS}
+            activeTab={activeTab}
+            onSelect={handleTabSelect}
+          />
+        ) : null}
+
+        <div className={showTabs ? 'product-showcase-frame' : 'product-showcase-frame is-without-tabs'}>
           <ProductCarousel
             products={MOCK_CELULAR_PRODUCTS}
             onActionClick={onActionClick}
           />
         </div>
 
-        <NotImplementedToast
-          isVisible={isCategoryToastVisible}
-          message={OUT_OF_STOCK_CATEGORY_MESSAGE}
-        />
+        {showTabs ? (
+          <NotImplementedToast
+            isVisible={isCategoryToastVisible}
+            message={OUT_OF_STOCK_CATEGORY_MESSAGE}
+          />
+        ) : null}
       </div>
     </section>
   )

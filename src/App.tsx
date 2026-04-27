@@ -4,6 +4,7 @@ import { BlackFridayHero } from './components/BlackFridayHero'
 import { CardOptions } from './components/CardOptions'
 import { Header } from './components/Header'
 import { NotImplementedToast } from './components/NotImplementedToast'
+import { PartnersStrip } from './components/PartnersStrip'
 import { ProductShowcase } from './components/ProductShowcase'
 
 const NOT_IMPLEMENTED_MESSAGE = 'funcionalidade ainda não implementada'
@@ -39,6 +40,13 @@ function App() {
       <BlackFridayHero onActionClick={showNotImplementedToast} />
       <CardOptions onActionClick={showNotImplementedToast} />
       <ProductShowcase onActionClick={showNotImplementedToast} />
+      <PartnersStrip onActionClick={showNotImplementedToast} />
+      <ProductShowcase
+        onActionClick={showNotImplementedToast}
+        showTabs={false}
+        headingSubtitle="Ver todos"
+      />
+      <PartnersStrip onActionClick={showNotImplementedToast} />
       <NotImplementedToast
         isVisible={isToastVisible}
         message={NOT_IMPLEMENTED_MESSAGE}

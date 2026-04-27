@@ -1,0 +1,95 @@
+.partner-card {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-image:
+    linear-gradient(102deg, rgba(0, 0, 0, 0.82) 4%, rgba(0, 0, 0, 0.54) 42%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%),
+    var(--partner-card-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.partner-card-content {
+  padding: 0 24px 20px;
+}
+
+.partner-card h3 {
+  margin: 0;
+  color: #fff;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.partner-card p {
+  width: 216px;
+  margin: 14px 0 16px;
+  color: #fff;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+.partner-card button {
+  width: 144px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background: #f7ca11;
+  color: #272727;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.partner-card button:hover {
+  filter: brightness(1.05);
+}
+
+@media (max-width: 1024px) {
+  .partner-card {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .partner-card h3 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partner-card {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .partner-card-content {
+    padding: 0 16px 16px;
+  }
+
+  .partner-card h3 {
+    font-size: 30px;
+  }
+
+  .partner-card p {
+    width: 190px;
+    margin: 10px 0 14px;
+    font-size: 16px;
+  }
+
+  .partner-card button {
+    width: 132px;
+    height: 44px;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+}
