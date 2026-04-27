@@ -1,0 +1,84 @@
+.card-option-item {
+  width: 128px;
+  min-width: 128px;
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.card-option-box {
+  width: 128px;
+  height: 128px;
+  border-radius: 10px;
+  background: #f4f4f4;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.card-option-item:hover .card-option-box {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-option-item.is-active .card-option-box {
+  background: #fff;
+}
+
+.card-option-icon {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+}
+
+.card-option-label {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #4f4f4f;
+  min-height: 21px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.card-option-item.is-active .card-option-label {
+  color: #2e37c9;
+}
+
+@media (max-width: 768px) {
+  .card-option-item {
+    gap: 14px;
+  }
+
+  .card-option-box {
+    width: 112px;
+    height: 112px;
+  }
+
+  .card-option-item {
+    width: 112px;
+    min-width: 112px;
+  }
+
+  .card-option-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .card-option-label {
+    font-size: 13px;
+  }
+}

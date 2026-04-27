@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import './App.css'
 import { BlackFridayHero } from './components/BlackFridayHero'
+import { CardOptions } from './components/CardOptions'
 import { Header } from './components/Header'
 import { NotImplementedToast } from './components/NotImplementedToast'
 
@@ -35,6 +36,7 @@ function App() {
     <div className="app">
       <Header onActionClick={showNotImplementedToast} />
       <BlackFridayHero onActionClick={showNotImplementedToast} />
+      <CardOptions onActionClick={showNotImplementedToast} />
       <NotImplementedToast
         isVisible={isToastVisible}
         message={NOT_IMPLEMENTED_MESSAGE}
