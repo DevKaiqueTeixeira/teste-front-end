@@ -1,11 +1,31 @@
 .menu-wrap {
+  position: relative;
   background: #fff;
+  padding-bottom: 2px;
+}
+
+.menu-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(100%, 1280px);
+  height: 45px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
   border-bottom: 1px solid #ececec;
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
 }
 
 .menu {
-  max-width: 1180px;
+  box-sizing: border-box;
+  width: min(100%, 1280px);
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
   padding: 0 16px;
   height: 45px;
   display: flex;
@@ -52,6 +72,14 @@
 }
 
 @media (max-width: 768px) {
+  .menu-wrap {
+    padding-bottom: 0;
+  }
+
+  .menu-wrap::before {
+    height: 42px;
+  }
+
   .menu {
     height: 42px;
     gap: 18px;
@@ -73,6 +101,10 @@
 }
 
 @media (max-width: 420px) {
+  .menu-wrap::before {
+    height: 44px;
+  }
+
   .menu {
     height: 44px;
     gap: 14px;

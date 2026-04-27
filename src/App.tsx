@@ -39,22 +39,24 @@ function App() {
   return (
     <div className="app">
       <Header onActionClick={showNotImplementedToast} />
-      <BlackFridayHero onActionClick={showNotImplementedToast} />
-      <CardOptions onActionClick={showNotImplementedToast} />
-      <ProductShowcase onActionClick={showNotImplementedToast} />
-      <PartnersStrip onActionClick={showNotImplementedToast} />
-      <ProductShowcase
-        onActionClick={showNotImplementedToast}
-        showTabs={false}
-        headingSubtitle="Ver todos"
-      />
-      <PartnersStrip onActionClick={showNotImplementedToast} />
-      <BrandNavigator onActionClick={showNotImplementedToast} />
-      <ProductShowcase
-        onActionClick={showNotImplementedToast}
-        showTabs={false}
-        headingSubtitle="Ver todos"
-      />
+      <main className="app-main">
+        <BlackFridayHero onActionClick={showNotImplementedToast} />
+        <CardOptions onActionClick={showNotImplementedToast} />
+        <ProductShowcase onActionClick={showNotImplementedToast} />
+        <PartnersStrip onActionClick={showNotImplementedToast} />
+        <ProductShowcase
+          onActionClick={showNotImplementedToast}
+          showTabs={false}
+          headingSubtitle="Ver todos"
+        />
+        <PartnersStrip onActionClick={showNotImplementedToast} />
+        <BrandNavigator onActionClick={showNotImplementedToast} />
+        <ProductShowcase
+          onActionClick={showNotImplementedToast}
+          showTabs={false}
+          headingSubtitle="Ver todos"
+        />
+      </main>
       <SiteFooter onActionClick={showNotImplementedToast} />
       <NotImplementedToast
         isVisible={isToastVisible}

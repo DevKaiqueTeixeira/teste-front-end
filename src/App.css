@@ -3,26 +3,26 @@
   background: #f5f5f5;
 }
 
-.app > .card-options-section {
+.app-main > .card-options-section {
   padding: 34px 16px 0;
 }
 
-.app > .product-showcase-section,
-.app > .partners-strip-section,
-.app > .brand-navigator-section {
-  margin-top: 80px;
+.app-main > .product-showcase-section,
+.app-main > .partners-strip-section,
+.app-main > .brand-navigator-section {
+  margin-top: 56px;
   padding: 0 16px;
 }
 
 @media (max-width: 768px) {
-  .app > .card-options-section {
+  .app-main > .card-options-section {
     padding: 26px 12px 0;
   }
 
-  .app > .product-showcase-section,
-  .app > .partners-strip-section,
-  .app > .brand-navigator-section {
-    margin-top: 56px;
+  .app-main > .product-showcase-section,
+  .app-main > .partners-strip-section,
+  .app-main > .brand-navigator-section {
+    margin-top: 40px;
     padding: 0 12px;
   }
 }

@@ -17,7 +17,7 @@ export function SiteFooter({ onActionClick }: SiteFooterProps) {
   }
 
   return (
-    <section className="site-footer-section" aria-label="Rodape do site">
+    <footer className="site-footer-section">
       <div className="site-footer-main">
         <div className="site-footer-newsletter">
           <div className="site-footer-newsletter-inner">
@@ -113,6 +113,6 @@ export function SiteFooter({ onActionClick }: SiteFooterProps) {
       <div className="site-footer-bottom">
         <p> 2026 Econverse. Todos os direitos reservados.</p>
       </div>
-    </section>
+    </footer>
   )
 }
