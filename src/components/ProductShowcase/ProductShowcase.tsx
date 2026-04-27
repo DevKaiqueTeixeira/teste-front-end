@@ -2,7 +2,9 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { NotImplementedToast } from '../NotImplementedToast'
 import { MOCK_CELULAR_PRODUCTS } from './mockProducts'
 import { ProductCarousel } from './components/ProductCarousel'
+import { ProductModal } from './components/ProductModal'
 import { ProductTabs } from './components/ProductTabs'
+import type { Product } from './types'
 import './ProductShowcase.css'
 
 type ProductShowcaseProps = {
@@ -29,6 +31,7 @@ export function ProductShowcase({
 }: ProductShowcaseProps) {
   const [activeTab, setActiveTab] = useState(CATEGORY_TABS[0])
   const [isCategoryToastVisible, setIsCategoryToastVisible] = useState(false)
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
   const timeoutRef = useRef<number | null>(null)
 
   const showOutOfStockToast = useCallback(() => {
@@ -94,7 +97,7 @@ export function ProductShowcase({
         <div className={showTabs ? 'product-showcase-frame' : 'product-showcase-frame is-without-tabs'}>
           <ProductCarousel
             products={MOCK_CELULAR_PRODUCTS}
-            onActionClick={onActionClick}
+            onProductSelect={setSelectedProduct}
           />
         </div>
 
@@ -102,6 +105,14 @@ export function ProductShowcase({
           <NotImplementedToast
             isVisible={isCategoryToastVisible}
             message={OUT_OF_STOCK_CATEGORY_MESSAGE}
+          />
+        ) : null}
+
+        {selectedProduct ? (
+          <ProductModal
+            product={selectedProduct}
+            onClose={() => setSelectedProduct(null)}
+            onActionClick={onActionClick}
           />
         ) : null}
       </div>

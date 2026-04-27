@@ -3,7 +3,7 @@ import './ProductCard.css'
 
 type ProductCardProps = {
   product: Product
-  onBuyClick: () => void
+  onOpenDetails: (product: Product) => void
 }
 
 const brlFormatter = new Intl.NumberFormat('pt-BR', {
@@ -15,7 +15,10 @@ function formatBRL(value: number) {
   return brlFormatter.format(value)
 }
 
-export function ProductCard({ product, onBuyClick }: ProductCardProps) {
+export function ProductCard({
+  product,
+  onOpenDetails,
+}: ProductCardProps) {
   const oldPrice = product.price * 1.08
   const installmentPrice = product.price / 2
 
@@ -42,7 +45,12 @@ export function ProductCard({ product, onBuyClick }: ProductCardProps) {
 
       <p className="product-card-shipping">Frete gratis</p>
 
-      <button type="button" className="product-card-buy-button" onClick={onBuyClick}>
+      <button
+        type="button"
+        className="product-card-buy-button"
+        aria-label={`Abrir detalhes de ${product.productName}`}
+        onClick={() => onOpenDetails(product)}
+      >
         COMPRAR
       </button>
     </article>

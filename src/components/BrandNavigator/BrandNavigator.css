@@ -1,0 +1,151 @@
+.brand-navigator-section {
+  width: 100%;
+  background: #f5f5f5;
+  padding: 4px 16px 24px;
+}
+
+.brand-navigator-container {
+  width: min(100%, 1364px);
+  margin: 0 auto;
+}
+
+.brand-navigator-container h2 {
+  margin: 0;
+  text-align: center;
+  color: #3442c5;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.brand-navigator-list {
+  width: min(100%, 1223px);
+  height: 211px;
+  margin: 38px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+}
+
+.brand-navigator-item {
+  width: 211px;
+  height: 211px;
+  min-width: 211px;
+  border: 1px solid #efefef;
+  border-radius: 105.5px;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-mini-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 117px;
+  height: 34.764461517333984px;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.brand-mini-logo-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f6c700;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  line-height: 1;
+  margin-right: -3px;
+}
+
+.brand-mini-logo-text {
+  color: #251f56;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.brand-navigator-item:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+@media (max-width: 1260px) {
+  .brand-navigator-container h2 {
+    font-size: 36px;
+  }
+
+  .brand-navigator-list {
+    width: 100%;
+    height: auto;
+    margin-top: 28px;
+    justify-content: flex-start;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 6px;
+  }
+
+  .brand-navigator-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .brand-navigator-item {
+    width: 182px;
+    height: 182px;
+    min-width: 182px;
+    border-radius: 91px;
+    scroll-snap-align: start;
+  }
+
+  .brand-mini-logo-circle {
+    width: 26px;
+    height: 26px;
+    font-size: 17px;
+  }
+
+  .brand-mini-logo-text {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-navigator-section {
+    padding: 2px 12px 18px;
+  }
+
+  .brand-navigator-container h2 {
+    font-size: 28px;
+  }
+
+  .brand-navigator-list {
+    margin-top: 22px;
+    gap: 12px;
+  }
+
+  .brand-navigator-item {
+    width: 148px;
+    height: 148px;
+    min-width: 148px;
+    border-radius: 74px;
+  }
+
+  .brand-mini-logo-circle {
+    width: 24px;
+    height: 24px;
+    font-size: 15px;
+  }
+
+  .brand-mini-logo-text {
+    font-size: 20px;
+  }
+}

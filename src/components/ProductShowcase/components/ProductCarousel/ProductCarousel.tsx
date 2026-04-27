@@ -6,12 +6,15 @@ import './ProductCarousel.css'
 
 type ProductCarouselProps = {
   products: Product[]
-  onActionClick: () => void
+  onProductSelect: (product: Product) => void
 }
 
 const CARDS_PER_PAGE = 4
 
-export function ProductCarousel({ products, onActionClick }: ProductCarouselProps) {
+export function ProductCarousel({
+  products,
+  onProductSelect,
+}: ProductCarouselProps) {
   const [page, setPage] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
   const [direction, setDirection] = useState<'next' | 'previous'>('next')
@@ -115,7 +118,10 @@ export function ProductCarousel({ products, onActionClick }: ProductCarouselProp
       >
         {visibleProducts.map((product) => (
           <div key={product.productName} role="listitem">
-            <ProductCard product={product} onBuyClick={onActionClick} />
+            <ProductCard
+              product={product}
+              onOpenDetails={onProductSelect}
+            />
           </div>
         ))}
       </div>

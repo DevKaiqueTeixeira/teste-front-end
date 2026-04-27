@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import './App.css'
+import { BrandNavigator } from './components/BrandNavigator'
 import { BlackFridayHero } from './components/BlackFridayHero'
 import { CardOptions } from './components/CardOptions'
 import { Header } from './components/Header'
@@ -47,6 +48,12 @@ function App() {
         headingSubtitle="Ver todos"
       />
       <PartnersStrip onActionClick={showNotImplementedToast} />
+      <BrandNavigator onActionClick={showNotImplementedToast} />
+      <ProductShowcase
+        onActionClick={showNotImplementedToast}
+        showTabs={false}
+        headingSubtitle="Ver todos"
+      />
       <NotImplementedToast
         isVisible={isToastVisible}
         message={NOT_IMPLEMENTED_MESSAGE}

@@ -51,8 +51,9 @@
   width: min(100%, 1364px);
   min-height: 597px;
   margin: 18px auto 0;
-  border: 1px solid #dfdfdf;
-  background: #fff;
+  border: none;
+  background: transparent;
+  box-shadow: none;
   padding: 16px 20px;
 }
 
