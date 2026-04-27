@@ -14,8 +14,6 @@ const brlFormatter = new Intl.NumberFormat('pt-BR', {
   currency: 'BRL',
 })
 
-const PRODUCT_TITLE_TEXT = 'PRODUTO EM DESTAQUE'
-
 const PRODUCT_INFO_TEXT =
   'Produto com design moderno, excelente desempenho e recursos ideais para o seu dia a dia.'
 
@@ -98,7 +96,7 @@ export function ProductModal({ product, onClose, onActionClick }: ProductModalPr
         </div>
 
         <div className="product-modal-content">
-          <h3>{PRODUCT_TITLE_TEXT}</h3>
+          <h3>{product.productName}</h3>
           <p className="product-modal-price">{formatBRL(product.price)}</p>
           <p className="product-modal-description">{PRODUCT_INFO_TEXT}</p>
           <button type="button" className="product-modal-link" onClick={onActionClick}>
