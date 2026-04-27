@@ -1,10 +1,44 @@
+import { useCallback, useEffect, useRef, useState } from 'react'
 import './App.css'
+import { BlackFridayHero } from './components/BlackFridayHero'
 import { Header } from './components/Header'
+import { NotImplementedToast } from './components/NotImplementedToast'
+
+const NOT_IMPLEMENTED_MESSAGE = 'funcionalidade ainda não implementada'
 
 function App() {
+  const [isToastVisible, setIsToastVisible] = useState(false)
+  const timeoutRef = useRef<number | null>(null)
+
+  const showNotImplementedToast = useCallback(() => {
+    setIsToastVisible(true)
+
+    if (timeoutRef.current !== null) {
+      window.clearTimeout(timeoutRef.current)
+    }
+
+    timeoutRef.current = window.setTimeout(() => {
+      setIsToastVisible(false)
+      timeoutRef.current = null
+    }, 2400)
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current !== null) {
+        window.clearTimeout(timeoutRef.current)
+      }
+    }
+  }, [])
+
   return (
     <div className="app">
-      <Header />
+      <Header onActionClick={showNotImplementedToast} />
+      <BlackFridayHero onActionClick={showNotImplementedToast} />
+      <NotImplementedToast
+        isVisible={isToastVisible}
+        message={NOT_IMPLEMENTED_MESSAGE}
+      />
     </div>
   )
 }

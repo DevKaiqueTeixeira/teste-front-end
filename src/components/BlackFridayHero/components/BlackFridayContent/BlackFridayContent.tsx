@@ -8,9 +8,8 @@ export function BlackFridayContent({ onActionClick }: BlackFridayContentProps) {
   return (
     <div className="black-friday-content">
       <h1 className="black-friday-title">
-        Venha conhecer nossas
-        <br />
-        promocoes
+        <span className="black-friday-title-line">Venha conhecer nossas</span>
+        <span className="black-friday-title-line">promoções</span>
       </h1>
 
       <p className="black-friday-subtitle">

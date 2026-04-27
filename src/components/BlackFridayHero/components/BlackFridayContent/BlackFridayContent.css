@@ -1,0 +1,124 @@
+.black-friday-content {
+  width: min(100%, 470px);
+  color: #fff;
+}
+
+.black-friday-title {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 50px;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+.black-friday-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.black-friday-subtitle {
+  margin: 24px 0 30px;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.black-friday-subtitle strong {
+  color: #f6c700;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.black-friday-button {
+  width: 206px;
+  max-width: 100%;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  padding: 7px 49px;
+  border: none;
+  background: #f6c700;
+  color: #1f1f1f;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  border-radius: 5px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.black-friday-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .black-friday-content {
+    width: min(100%, 320px);
+  }
+
+  .black-friday-title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .black-friday-title-line {
+    white-space: normal;
+  }
+
+  .black-friday-subtitle {
+    margin: 16px 0 20px;
+    font-size: 28px;
+  }
+
+  .black-friday-subtitle strong {
+    font-size: 28px;
+  }
+
+  .black-friday-button {
+    font-size: 20px;
+    width: 188px;
+    height: 46px;
+    padding: 7px 36px;
+  }
+}
+
+@media (max-width: 420px) {
+  .black-friday-content {
+    width: min(100%, 288px);
+  }
+
+  .black-friday-title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .black-friday-subtitle {
+    font-size: 24px;
+  }
+
+  .black-friday-subtitle strong {
+    font-size: 24px;
+  }
+
+  .black-friday-button {
+    font-size: 18px;
+    width: 176px;
+    height: 44px;
+    padding: 7px 24px;
+  }
+}

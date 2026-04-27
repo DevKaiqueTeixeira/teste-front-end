@@ -1,0 +1,1 @@
+export { BlackFridayHero } from './BlackFridayHero'

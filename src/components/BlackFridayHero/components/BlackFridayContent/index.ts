@@ -1,0 +1,1 @@
+export { BlackFridayContent } from './BlackFridayContent'
