@@ -1,0 +1,26 @@
+.top-bar {
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 110px;
+  font-size: 12px;
+  color: #9f9f9f;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.top-bar strong {
+  color: #3019b2;
+}
+
+.top-bar span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
